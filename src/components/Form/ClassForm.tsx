@@ -124,7 +124,6 @@ if(field=='section'){
         id="outlined-required"
         label={t('section')}
         name="section"
-        disabled={!!curClass}
       />
          </Box>
         <DialogActions>
