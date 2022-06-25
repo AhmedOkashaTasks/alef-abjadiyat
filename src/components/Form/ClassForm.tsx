@@ -71,7 +71,7 @@ const validHandler=(field:string)=>{
         _errors['name']="class name is required !!"
             }
             if(typeof _fields['name']!==undefined){
-        if(!_fields['name'].match(/^[a-zA-Z]+$/)){
+        if(!_fields['name'].match(/[\p{L}-]+/ug)){
             formIsValid=false;
             _errors['name']="letters only alowed for class name"
         
@@ -88,7 +88,7 @@ if(field=='section'){
         _errors['section']="class section is required !!"
             }
             if(typeof _fields['section']!==undefined){
-        if(!_fields['section'].match(/^[a-zA-Z]+$/)){
+        if(!_fields['section'].match(/[\p{L}-]+/ug)){
             
             formIsValid=false;
             _errors['section']="letters only alowed for section name"
