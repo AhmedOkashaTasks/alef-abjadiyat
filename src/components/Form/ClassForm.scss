@@ -1,0 +1,21 @@
+.classform_main .MuiDialog-paper{
+// padding: 20px;
+
+    >h2{
+        background-color: rgb(98, 195, 238) ; 
+        text-align: center;
+        color: #fff;    }
+     & >div:nth-child(2){
+padding: 20px;
+display: flex;
+justify-content: space-between;
+gap: 20px;
+    }
+    button{
+        border: 1px solid lightgray;
+        color: rgb(159, 159, 159);
+        margin: 10px;
+        span{
+        color: rgb(98, 195, 238) ;
+        }}
+}

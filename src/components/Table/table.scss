@@ -1,0 +1,68 @@
+
+div.MuiTableContainer-root{
+    width: 90%;
+    min-height: 95vh;
+    margin: auto;
+    padding: 10px;
+    
+
+    > button{
+        border: 1px solid lightgray;
+        color: rgb(159, 159, 159);
+        margin: 10px;
+        span{
+        color: rgb(98, 195, 238) ;
+    
+    }
+    
+    }
+}
+
+.table_ltr{
+table{
+    direction: ltr;
+}
+>button{
+    float: left;
+}
+}
+.table_rtl{
+    table{
+        direction: rtl;
+    }
+    >button{
+        float: right;
+    }
+    
+}
+th.MuiTableCell-head{
+    font-weight: 700;
+    border-top: 1.5px solid #E0E0E0;
+}
+tr.MuiTableRow-root{
+td,th{
+    padding: 5px !important;
+text-align: center;
+}
+
+    & th:nth-child(3) {
+        width:30% ;
+        text-align: center;
+        }   
+
+td.MuiTableCell-body{
+    button{
+        color: rgb(98, 195, 238) ;
+    }
+   
+}
+& td:last-child  button{
+    background-color: rgb(105, 123, 140);
+    color: #fff;
+font-size: 1rem;
+}
+& td:nth-child(3) {
+width:30% ;
+text-align: center;
+}
+}

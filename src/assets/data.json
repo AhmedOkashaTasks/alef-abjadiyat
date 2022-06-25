@@ -1,0 +1,62 @@
+[
+  {
+    "name": "الاول",
+    "sections": [
+      {
+        "id": "1",
+        "section": "الاسود",
+        "students": 1
+      }
+    ]
+  },
+  {
+    "name": "الثاني",
+    "sections": [
+      {
+        "id": "2",
+        "section": "الاسود",
+        "students": 1
+      }
+    ]
+  },
+  {
+    "name": "الثالث",
+    "sections": [
+      {
+        "id": "3",
+        "section": "النمور",
+        "students": 1
+      }
+    ]
+  },
+  {
+    "name": "الرابع",
+    "sections": [
+      {
+        "id": "4",
+        "section": "القطط",
+        "students": 1
+      }
+    ]
+  },
+  {
+    "name": "الخامس",
+    "sections": [
+      {
+        "id": "5",
+        "section": "الضباع",
+        "students": 1
+      },
+      {
+        "id": "6",
+        "section": "الاقوياء",
+        "students": 1
+      },
+      {
+        "id": "7",
+        "section": "الكواسر",
+        "students": 1
+      }
+    ]
+  }
+]

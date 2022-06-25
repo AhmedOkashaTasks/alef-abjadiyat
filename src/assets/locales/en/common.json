@@ -1,0 +1,20 @@
+{
+    "section":"Section",
+    "class":"Class",
+    "students":"Students",
+    "join_key":"Join Key",
+    "login_key":"Login Key",
+    "add":"Add",
+    "edit":"Edit",
+    "delete":"Delete",
+    "add_class":"Add Class",
+    "apology":"Sorry, No classes to display !!",
+    "cancel":"Cancel",
+    "main":"Main",
+      "grads":"Grades & Evaluations",
+      "reports":"Reports",
+      "classes":"Classes"
+
+
+
+}
