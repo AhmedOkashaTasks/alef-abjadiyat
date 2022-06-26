@@ -40,7 +40,7 @@ if(!curClass){
 dispatch(addClass(fields))
 }else{
 
-dispatch(updateClass({section:fields.section,id:curClass.sections[0].id}))
+dispatch(updateClass({name:fields.name,section:fields.section,id:curClass.sections[0].id}))
 }
     setFields({name:'',section:''})
 classFormClose()}

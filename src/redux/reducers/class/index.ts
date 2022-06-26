@@ -48,14 +48,20 @@ return _result
 
     //--------------------------------
 
-    updateClass: (state, action:PayloadAction<{section:string,id:string}>) => {
+    updateClass: (state, action:PayloadAction<{name:string,section:string,id:string}>) => {
+console.log(action.payload);
 
-      const {section,id}=action.payload;
+      const {name,section,id}=action.payload;
       //updating section name ONLY for simplicity but could be extended
 
-      let _state= _.map({...current(state)},(element) => {
+      let _state= _.map({...current(state)},(element,i) => {
         
-        return {...element, sections: _.map(element.sections,(exSection)=>{
+        return {name:_.find(element.sections,(v)=>{
+           if(v.id===id){
+return true
+        }else{return false}}
+          
+          )?name:element.name, sections: _.map(element.sections,(exSection)=>{
           
           return exSection.id===id? {...exSection,section:section} : exSection
         })}
