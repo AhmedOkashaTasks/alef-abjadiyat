@@ -12,7 +12,7 @@ import {HiKey} from 'react-icons/hi'
 import {TiUserAdd} from 'react-icons/ti'
 import {MdEdit} from 'react-icons/md'
 import {RiDeleteBin6Fill} from 'react-icons/ri'
-import {Button,IconButton} from '@mui/material';
+import {Button,IconButton,Grow,Slide} from '@mui/material';
 import {MdAddCircle} from 'react-icons/md'
 import {MdLanguage} from 'react-icons/md'
 import i18next from 'i18next';
@@ -21,6 +21,7 @@ import { useAppDispatch } from "../../hooks";
 import {removeClass,} from '../../redux/reducers/class'
 import {ITableProps} from '../../types'
 import './table.scss'
+import { useState ,useEffect} from 'react';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -49,7 +50,15 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
  const  Table: React.FC<ITableProps> = ({classes,handleClickOpen,getCurrentClass,classFormShow}) =>{
   const dispatch = useAppDispatch();
   const {t,i18n } = useTranslation();
+  const [visible,setVisible]=useState<boolean>(false)
 
+
+  //controle table visibilty
+  useEffect(()=>{
+setVisible(true)
+  },[])
+
+  
   //delete class handler
   const deleteHandler=(id:string)=>{
      dispatch(removeClass(id))
@@ -82,6 +91,10 @@ const editClassHandler =(row:IClass)=>{
 
 
   return (
+    <Grow
+          in={visible}
+          {...(visible ? { timeout: 2000 } : {})}
+        >
     <TableContainer className={`table_${i18n.dir()}`} component={Paper}>
         <Button onClick={classFormShow} endIcon={<MdAddCircle />}>
   {t('add_class')}
@@ -127,7 +140,7 @@ const editClassHandler =(row:IClass)=>{
           )}
         </TableBody>
       </MuTable>
-    </TableContainer>
+    </TableContainer></Grow>
   );
 }
 export default Table

@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import {
   AppBar,
   Toolbar,
   CssBaseline,
   IconButton,
-  Button
+  Button,Slide
   
 } from "@mui/material";
 import {FiUser} from 'react-icons/fi'
@@ -22,9 +22,16 @@ import { useTranslation } from 'react-i18next';
 
 function Navbar() {
   const {t,i18n } = useTranslation();
+  const [visible,setVisible]=useState<boolean>(false)
 
+
+  //controle table visibilty
+  useEffect(()=>{
+    setVisible(true)
+      },[])
 
   return (
+    <Slide direction="down" in={visible} mountOnEnter unmountOnExit  {...(visible ? { timeout: 2000 } : {})}>
     <AppBar position="static" className="nav_main" dir={`${i18n.dir()}`}>
       <CssBaseline />
       <Toolbar>
@@ -56,7 +63,7 @@ function Navbar() {
           </div>
           
       </Toolbar>
-    </AppBar>
+    </AppBar></Slide>
   );
 }
 export default Navbar;
