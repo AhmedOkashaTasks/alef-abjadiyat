@@ -8,6 +8,8 @@ const App: React.FC = () =>{
 <p>alef task</p>
 <span>alef task</span>
 <h1>alef task</h1>
+<h2>alef task</h2>
+
 
 
 
