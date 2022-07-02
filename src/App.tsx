@@ -7,6 +7,8 @@ const App: React.FC = () =>{
     <div className="App">
 <p>alef task</p>
 <span>alef task</span>
+<h1>alef task</h1>
+
 
 
       <h2>hi</h2>
