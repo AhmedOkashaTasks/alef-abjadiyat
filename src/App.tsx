@@ -6,6 +6,8 @@ const App: React.FC = () =>{
   return (
     <div className="App">
 <p>alef task</p>
+<span>alef task</span>
+
 
       <h2>hi</h2>
           <Home/>
