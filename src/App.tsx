@@ -5,9 +5,10 @@ const App: React.FC = () =>{
 
   return (
     <div className="App">
-          <h1>hello world</h1>
-          {<Home/>}
-          
+
+      <h2>hi</h2>
+          <Home/>
+
     </div>
   );
 }
