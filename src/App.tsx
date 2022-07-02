@@ -10,10 +10,7 @@ const App: React.FC = () =>{
 <h3>alef task 3</h3>
 <h4>alef task 4</h4>
 <h5>alef task 5</h5>
-
-
-
-
+<h6>alef task 6</h6>
 
       <h2>hi</h2>
           <Home/>
