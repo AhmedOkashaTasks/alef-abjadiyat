@@ -6,8 +6,7 @@ const App: React.FC = () =>{
   return (
     <div className="App">
 <h1>alef task</h1>
-<h1>alef task</h1>
-<h1>alef task</h1>
+<h2>alef task 2</h2>
 
 
       <h2>hi</h2>
