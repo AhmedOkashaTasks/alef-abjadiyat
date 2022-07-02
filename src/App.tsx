@@ -5,7 +5,7 @@ const App: React.FC = () =>{
 
   return (
     <div className="App">
-<h1>alef task</h1>
+<p>alef task</p>
 
       <h2>hi</h2>
           <Home/>
