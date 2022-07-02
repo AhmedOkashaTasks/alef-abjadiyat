@@ -5,6 +5,7 @@ const App: React.FC = () =>{
 
   return (
     <div className="App">
+      <h2>hi</h2>
           <Home/>
     </div>
   );
