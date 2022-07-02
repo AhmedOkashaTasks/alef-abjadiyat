@@ -4,7 +4,7 @@ import {
   Toolbar,
   CssBaseline,
   IconButton,
-  Button,Slide
+  Button,Slide,useMediaQuery,useTheme
   
 } from "@mui/material";
 import {FiUser} from 'react-icons/fi'
@@ -18,12 +18,16 @@ import {MdKeyboardArrowDown} from 'react-icons/md'
 import logo from '../../assets/logo-bi.svg'
 import './Navbar.scss'
 import { useTranslation } from 'react-i18next';
+import DrawerComponent from "../drawer";
+
 
 
 function Navbar() {
   const {t,i18n } = useTranslation();
   const [visible,setVisible]=useState<boolean>(false)
+  const theme = useTheme();
 
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   //controle table visibilty
   useEffect(()=>{
@@ -31,7 +35,8 @@ function Navbar() {
       },[])
 
   return (
-    <Slide direction="down" in={visible} mountOnEnter unmountOnExit  {...(visible ? { timeout: 2000 } : {})}>
+    <>
+    {isMobile? <DrawerComponent/>: <Slide direction="down" in={visible} mountOnEnter unmountOnExit  {...(visible ? { timeout: 2000 } : {})}>
     <AppBar position="static" className="nav_main" dir={`${i18n.dir()}`}>
       <CssBaseline />
       <Toolbar>
@@ -63,7 +68,8 @@ function Navbar() {
           </div>
           
       </Toolbar>
-    </AppBar></Slide>
+    </AppBar></Slide>}
+    </>
   );
 }
 export default Navbar;
